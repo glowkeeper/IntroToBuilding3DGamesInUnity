@@ -1,6 +1,6 @@
 # 3D Graphics
 
-If you are interested in the maths that underlies 3D graphics (or have some mathematical background), [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html) gives a brilliant introduction, and much of the material below is drawn from there. A lot of the maths relies on [vectors](./maths/vectors.md), and in the [links](#links) section, you will find an introductory document explaining some vector maths. That section also contains some other introductory maths material, such as [coordinate systems](./coordinateSystems.md), [forces](./forces.md) and [trigonometry](./trigonometry.md).
+If you are interested in the maths that underlies 3D graphics (or have some mathematical background), [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html) gives a brilliant introduction, and much of the material below is drawn from there. A lot of the maths relies on [vectors](./maths/vectors.md), and in the [links](#links) section, you will find an introductory document explaining some vector maths. That section also contains some other introductory maths material, such as [coordinate systems](./maths/coordinateSystems.md), [forces](./maths/forces.md) and [trigonometry](./maths/trigonometry.md).
 
 ## Ray Tracing
 
