@@ -3,7 +3,6 @@
 Welcome to _An Introduction to Building 3D Games in Unity_, a 3-hour workshop run for foundation year students at the [University of Roehampton](https://www.roehampton.ac.uk/).
 
 ## Table of Contents
-
 - [An Introduction to Building 3D Games in Unity](#an-introduction-to-building-3d-games-in-unity)
   - [Table of Contents](#table-of-contents)
   - [Introduction to Building 3D Games in Unity](#introduction-to-building-3d-games-in-unity)
