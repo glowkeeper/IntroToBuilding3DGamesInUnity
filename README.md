@@ -3,13 +3,12 @@
 Welcome to _An Introduction to Building 3D Games in Unity_, a 3-hour workshop run for foundation year students at the [University of Roehampton](https://www.roehampton.ac.uk/).
 
 ## Table of Contents
-- [An Introduction to Building 3D Games in Unity](#an-introduction-to-building-3d-games-in-unity)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction to Building 3D Games in Unity](#introduction-to-building-3d-games-in-unity)
-  - [Dependencies](#dependencies)
-  - [Workshop Contents](#workshop-contents)
-  - [Background Material](#background-material)
-  - [License](#license)
+<!-- no toc -->
+- [Introduction to Building 3D Games in Unity](#introduction-to-building-3d-games-in-unity)
+- [Dependencies](#dependencies)
+- [Workshop Contents](#workshop-contents)
+- [Background Material](#background-material)
+- [License](#license)
 
 ## Introduction to Building 3D Games in Unity
 
@@ -29,15 +28,15 @@ If you plan on taking part in the workshop via your own laptop in your own time,
 - [Creating 3D Objects](./docs/creating3DObjects.md)
 - [Adding Input Controls](./docs/addingInputControls.md)
 
-Below is some background material to the concepts introduced above:
+## Background Material
+
+Below is some background material that helps explain some of the concepts introduced above:
 
 - [Modelling](./modelling.md)
 - [Materials and Textures](./materials.md)
 - [3D Physics](./3DPhysics.md)
 - [Audio](./audio.md)
 - [Scripting](./scripting.md)
-
-## Background Material
 
 As you immerse yourself in the 3D programming space, you may wish to deepen your knowledge by grasping some of the theoretical background underpinning the work you do. To help get you started, here's some theory:
 
