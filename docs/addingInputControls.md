@@ -20,7 +20,7 @@ It is a good idea to keep your project well organised, so in the _Project_ view,
 
 ## Adding the Input System
 
-Now use the Unity Input System to add input interactions to the ball. Click menu: Window > Package Manager then Select "Packages: Unity Registry" and select the "Input System" package from the list, as per Figure 3, below. Click _Install_ (top right) and then "Yes" on the warning message. Your Unity project will close and restart. That may take while, so be patient.
+Now use the Unity Input System to add input interactions to the ball. Click menu: _Window > Package Manager_ then select _Packages: Unity Registry_ and select the _Input System_ package from the list, as per Figure 3, below. Click _Install_ (top right) and then _Yes_ on the warning message. Your Unity project will close and restart. That may take while, so be patient.
 
 ![Input System](./images/unityInputSystem.png)
 
@@ -32,7 +32,7 @@ Create another folder via the _Project_ view, and call it "Input", as per Figure
 
 _Figure 4: Input folder_
 
-By default the icon is an outline, as the folder is currently empty. Double click the folder and then use the Project create Menu to create an _Input Action_. Call this myControl, as per Figure 5.
+By default the icon is an outline, as the folder is currently empty. Double click the folder and then use the _Project_ create menu to create an _Input Action_. Call this myControl, as per Figure 5.
 
 ![Input Action](./images/myControl.png)
 
@@ -80,11 +80,11 @@ Add the Input System to the code by adding the following line at the top of your
 
 `using UnityEngine.InputSystem;`
 
-By default, the _Jump_ Input Action will invoke a method called `OnJump()`. Input Actions invoke methods using this pattern:
+By default, Input Actions invoke methods using this pattern:
 
 `public void On[Action Name Goes Here]()`
 
-For example, the _Jump_ Action invokes `OnJump()`, while, if you created an _Attack_ action, it would invoke `OnAttack()`.
+Hence, the _Jump_ Input Action will invoke a method called `OnJump()`. Imagine you created an _Attack_ action, that would invoke `OnAttack()`.
 
 Add the following method below your Update method:
 
@@ -103,21 +103,21 @@ Save the script and run the project. When you push the space bar you should see 
 
 _Figure 11: Jump Pressed console output_
 
-Ultimately we are going to get the ball to jump, but let's do something simpler first. Below the Debug line add the code: 
+Ultimately, you will get the ball to jump, but do something simpler, first. Below the Debug line add the code: 
 
 `GetComponent<Renderer>().material.color = Color.blue;`
 
-Save the script and play. This line assigns the colour blue to material of the _GameObject_ to which the script is attached. So your ball should turn blue. 
+Save the script and play. The line above assigns the colour blue to the material of the _GameObject_ to which the script is attached. So your ball should turn blue. 
 
-Now make the ball actually jump. You can use `transform.Translate` and `transform.Rotate` to move _GameObjects_, but in this instance, it is better to employ the Unity physics engine because we're using _forces_. In Unity, you apply forces to a _RigidBody_, which has already been added to the ball. So, the general idea of the script is to add a reference to that `Rigidbody` and then apply a force to that. Add the following line after the opening `{` of the myBall class:
+Now make the ball actually jump. Although you can use `transform.Translate` and `transform.Rotate` to move _GameObjects_, in this instance it is better to employ the Unity physics engine because you will be applying a _force_ to the ball. In Unity, you apply forces to a _RigidBody_, which has already been added the ball. So, the general idea of the script is to add a reference to that `Rigidbody` and then apply a force to that. To do so, add the following line after the opening `{` of the myBall class:
 
 `private Rigidbody rb;`
 
-Now assign the _Rigidbody_ component to the `rb` variable in the `Start()` method:
+Then assign the _Rigidbody_ component to the `rb` variable in the `Start()` method:
 
 `rb = GetComponent<Rigidbody>();`
 
-`rb` is now associated with the _RigidBody_ of the ball _GameObject_ and a force can be applied to it to get it to move. Add the following code to the `OnJump()` method:
+Finally, now `rb` is associated with the _RigidBody_ of the ball _GameObject_, a force can be applied to it to get it to move. Add the following code to the `OnJump()` method:
 
 `rb.AddForce(0.0f, 300.0f, 0.0f);`
 
@@ -161,7 +161,7 @@ Save the script and then play the scene and the ball should turn blue and jump w
 
 _Figure 12: The blue jumping ball_
 
-However, it is bad practice to litter your code with _magic numbers_. Much better is to assign the numbers to a variable and then use the variable. Furthermore, in Unity, if you serialise the variable, it will be available in the _Inspector_ and the value can be changed there. That has many benefits and those are left as an exercise for you to consider. So, create a variable and use that in place of the `300.0f` value in the AddForce method above. Here's the finished script:
+However, it is bad practice to litter your code with _magic numbers_. Much better is to assign the numbers to a variable and then use the variable. Furthermore, in Unity, if you serialise the variable, it will be available in the _Inspector_ and the value can be changed there. That has many benefits and those are left as an exercise for you to research. So, create a variable and use that in place of the `300.0f` value in the AddForce method above. Here's the finished script:
 
 ```csharp
 using System.Collections;
@@ -197,7 +197,7 @@ public class myBall : MonoBehaviour
 }
 ```
 
-Again, it is a good idea to keep your project well organised, so in the _Project_ view, create a _Folder_ called _Scripts_. Drag your _myBall_ script into that folder, then save the project.
+Again, it is a good idea to keep your project well organised, so in the _Project_ view, create a folder called "Scripts". Drag your "myBall" script into that folder, then save the project.
 
 ## Links
 
