@@ -14,7 +14,7 @@ This plane is a _GameObject_ and should appear as the object _Plane_ in your Hie
 
 ![Hierarchy](./images/planeHierarchy.png)
 
-_Figure 2: Plane in the Hierarchy.
+_Figure 2: Plane in the Hierarchy_
 
 Now use the same method to put another of Unity's basic _GameObjects_ on the _plane_ - a _cube_. You should get something like Figure 3:
 
