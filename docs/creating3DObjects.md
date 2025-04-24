@@ -10,35 +10,37 @@ Using the Hierarchy window's _create_ tab (available via a right click), select 
 
 _Figure 1: A plane_
 
-This plane is a _GameObject_ and should appear as the object _Plane_ in your Hierarchy view.
+This plane is a _GameObject_ and should appear as the object _Plane_ in your Hierarchy view, as per Figure 2.
 
 ![Hierarchy](./images/planeHierarchy.png)
 
-Now use the same method to put another of Unity's basic _GameObjects_ on the _plane_ - a _cube_. You should get something like Figure 2:
+_Figure 2: Plane in the Hierarchy.
+
+Now use the same method to put another of Unity's basic _GameObjects_ on the _plane_ - a _cube_. You should get something like Figure 3:
 
 ![Cube](./images/planeAndCube.png)
 
-_Figure 2: A cube_
+_Figure 3: A cube_
 
-At this point, you have a white cube embedded in a white plane, because both the cube and the plane have the same origin. Select the cube in the Hierarchy menu and you can see its position in the _Transform_ component in the Inspector window. Change the Y position to 2. It should now float above the plane, just like Figure 3.
+At this point, you have a white cube embedded in a white plane, because both the cube and the plane have the same origin. Select the cube in the Hierarchy menu and you can see its position in the _Transform_ component in the Inspector window. Change the Y position to 2. It should now float above the plane, just like Figure 4.
 
 ![Cube](./images/cubeAbovePlane.png)
 
-_Figure 3: A cube above a plane_
+_Figure 4: A cube above a plane_
 
 ### Adding Materials
 
-To add some colour to the cube we need to add a material. In the Project view, click the create menu and select _Material_. A grey sphere should appear at the bottom of your Inspector view, just like Figure 4.
+To add some colour to the cube we need to add a material. In the Project view, click the create menu and select _Material_. A grey sphere should appear at the bottom of your Inspector view, just like Figure 5.
 
 ![New Material](./images/newMaterial.png)
 
-_Figure 4: New material_
+_Figure 5: New material_
 
-Towards the top of the Inspector window is a colour chooser next to the word _Albedo_, which is the property that controls the base color and transparency of the material. Click on the white rectangle and choose a bright red colour (RGB, 255,0,0). You should now see a red sphere called _New Material_ in the assets folder in the project view, as shown in Fugure 5. Drag this red sphere on to the cube in the Scene view.
+Towards the top of the Inspector window is a colour chooser next to the word _Albedo_, which is the property that controls the base color and transparency of the material. Click on the white rectangle and choose a bright red colour (RGB, 255,0,0). You should now see a red sphere called _New Material_ in the assets folder in the project view, as shown in Fugure 6. Drag this red sphere on to the cube in the Scene view.
 
 ![Apply Material](./images/applyMaterial.png)
 
-_Figure 5: Apply material_
+_Figure 6: Apply material_
 
 Save your scene - File - Save.
 
@@ -64,9 +66,9 @@ Now push play and the cube will drop under the influence of gravity util it hits
 
 4. Try adding a cube that the sphere will hit to deflect its movement. Note you can change the dimension of the cube to make it easier to hit.
 
-If you've followed everything above, you should have something like Figure 6 (all the objects have had coloured matertials added to make them easier to see).
+If you've followed everything above, you should have something like Figure 7 (all the objects have had coloured matertials added to make them easier to see).
 
 ![](./images/colouredObjects.png)
 
-_Figure 6: Coloured objects_ 
+_Figure 7: Coloured objects_ 
 
