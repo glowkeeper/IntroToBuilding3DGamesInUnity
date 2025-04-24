@@ -95,28 +95,29 @@ Add the following method below your Update method:
 ```csharp
 void OnJump() 
 { 
-    Debug.Log("Jump Pressed"); 
-         
+    Debug.Log("Jump Pressed");          
 } 
 ```
 
 You have added the Debug command here to check if the Jump action is working. This outputs the words "Jump Pressed" to the Console window.
 
-Save the script and run the project. When you push the space bar you should get the following in the Console window:
+Save the script and run the project. When you push the space bar you should see "Jump Pressed" in the Console window, as per Figure 11:
 
-![Console](./images/unityFundamentalsimage10.png)
+![Console](./images/jumpPressed.png)
+
+_Figure 11: Jump Pressed console output_
 
 Ultimately we are going to get the ball to jump, but let's do something simpler first. Below the Debug line add the code: 
 
 `GetComponent<Renderer>().material.color = Color.blue;`
 
-Save the script and play. This line assigns the colour blue to the _GameObject_ to which the script is attached. So your ball should turn blue. 
+Save the script and play. This line assigns the colour blue to the _GameObject material_ to which the script is attached. So your ball should turn blue. 
 
-OK so now you need to make the ball actually jump. In the [Unity 1 - Player control](https://learn.unity.com/project/unit-1-driving-simulation?missionId=5f71fe63edbc2a00200e9de0&pathwayId=5f7e17e1edbc2a5ec21a20af&contentId=5f7229b2edbc2a001f834db7) tutorial, a `transform.Translate` and `transform.Rotate` were used to move the _GameObject_. This is straightforward, but not always ideal - instead, you should use _forces_ so that you deploy the Unity physics engine. In Unity, you apply forces to a _RigidBody_. We already have a _RigidBody_ added to our ball, so let's add a reference to that in the script. Add the following line after the opening `{` for the myBall class:
+Now you need to make the ball actually jump. In the [Unity 1 - Player control](https://learn.unity.com/project/unit-1-driving-simulation?missionId=5f71fe63edbc2a00200e9de0&pathwayId=5f7e17e1edbc2a5ec21a20af&contentId=5f7229b2edbc2a001f834db7) tutorial, a `transform.Translate` and `transform.Rotate` were used to move the _GameObject_. This is straightforward, but not always ideal - instead, you should use _forces_ so that you deploy the Unity physics engine. In Unity, you apply forces to a _RigidBody_. We already have a _RigidBody_ added to our ball, so let's add a reference to that in the script. Add the following line after the opening `{` for the myBall class:
 
 `private Rigidbody rb;`
 
-Now you need to assign the `rb` variable. In the `Start()` method add the following:
+Now you need to assign the _Rigidbody_ component to the `rb` variable. In the `Start()` method add the following:
 
 `rb = GetComponent<Rigidbody>();`
 
@@ -130,6 +131,7 @@ Now you need to assign the `rb` variable. In the `Start()` method add the follow
 using System.Collections; 
 using System.Collections.Generic; 
 using UnityEngine; 
+
 using UnityEngine.InputSystem; 
 
 public class myBall : MonoBehaviour 
@@ -147,23 +149,57 @@ public class myBall : MonoBehaviour
     { 
          
     } 
+
     void OnJump() 
     { 
         Debug.Log("Jump Pressed"); 
         GetComponent<Renderer>().material.color = Color.blue; 
         rb.AddForce(0.0f, 300.0f, 0.0f); 
-
     } 
 }
 ```
 
-Save the script and then play the scene and the ball should turn blue and jump when you press the space bar. 
+Save the script and then play the scene and the ball should turn blue and jump when you press the space bar, just like Figure 12. 
 
 ![Play the Scene](./images/unityFundamentalsimage11.png)
 
-## Exercise Summary
+_Figure 12: The blue jumping ball_
 
-What you have done here is very simple, but hopefully you get the idea of applying a force to a _RigidBody_ using scripting. You can play around with the Z value, but it is never ideal to hard code values like this and you will notice if you repeatedly hit the spacebar the ball carries on going up. Also, you would want to do something with the x and y values in a real game.  
+Finally, it is bad practice to litter your code with _magic numbers_. Much better is to assign the numbers to a variable and then use the variable. Furthermore, in Unity, if you serialise the variable, it will be available in the Inspector and the value can be changed there. Hence, you should create a variable and use that in place of the `300.0f` value in the AddForce method above. Here's the finished script:
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.InputSystem;
+
+public class myBall : MonoBehaviour
+{
+
+    [SerializeField] private float jumpFactor = 300.0f;
+    private Rigidbody rb;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void OnJump() 
+    { 
+        Debug.Log("Jump Pressed"); 
+        GetComponent<Renderer>().material.color = Color.blue;
+        rb.AddForce(0.0f, jumpFactor, 0.0f);
+    } 
+}
+```
 
 ## Links
 
