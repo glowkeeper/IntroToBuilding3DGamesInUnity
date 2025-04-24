@@ -1,52 +1,78 @@
 # Adding Input Controls
 
-In this exercise, you will use Unity's [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html) to add interactions to _GameObjects_.
+Now you will use Unity's [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html) to add interactions to _GameObjects_.
 
-## Creating GameObjects
+Delete the cube you [created](./creating3DObjects.md). Rename the plane "ground", and the sphere "ball".Reset the ground's transform so it's rotation values are all zero. You should have something that looks similar to Figure 1, below.
 
-Create a new project called "JumpUp". Add a plane and call it "ground", and add a sphere and call it "ball".
+![Ball and Plane](./images/groundAndBall.png)
 
-![Ball and Plane](./images/unityFundamentalsimage1.png)
+_Figure 1: Ground and ball_
 
 Add a _RigidBody_ to your ball. When you press play the ball should drop on to the ground and stop.
 
-### Adding the Input System
+## Add a Physics Material
 
-Now use the Unity Input System to make the ball do something. Click menu: Window > Package Manager then Select "Packages: Unity Registry" and then "Input System" package from the list. Click Install (top right) and then "Yes" on the warning message. Your Unity project will close and restart.
+In the _Project_ view, click the create menu and select _Physic Material_. Set the _Bounciness_ of the material to 1, then drag the _Physic Material_ onto the ball. You should see the _Physic Material_ assigned to the Material property of the ball's Sphere Collider in the _Inspector_, as per Figure 2. Press play, and your ball should bounce.
 
-![Input System](./images/unityFundamentalsimage2.png)
+![Ball Physics Material](./images/ballPhsyicsMaterial.png)
 
-Create an empty folder in your Assets folder and call it "Input".
+_Figure 2: Ball Physics Material_
 
-![Input Folder](./images/unityFundamentalsimage3.png)
+It is a good idea to keep your project well organised, so in the _Project_ view, click the create menu and create a _Folder_ called _Materials_. Drag your materials into that folder.
 
-By default the icon is an outline as the folder is currently empty. Double click the folder and then use the Project create Menu to create an "Input Actions" and call this myControl.
+## Adding the Input System
 
-![Input Action](./images/unityFundamentalsimage4.png)
+Now use the Unity Input System to add input interactions to the ball. Click menu: Window > Package Manager then Select "Packages: Unity Registry" and then "Input System" package from the list, as per Figure 3, below. Click _Install_ (top right) and then "Yes" on the warning message. Your Unity project will close and restart.
 
-Double click on the myControl icon to open the input actions dialog.
+![Input System](./images/unityInputSystem.png)
 
-![Input Actions Dialogue](./images/unityFundamentalsimage5.png)
+_Figure 3: Unity Input System_
 
-Click on the + next to Action Maps to create a new map and then rename the Action to "Jump".
+Create an another folder via the _Project_ view, and call it "Input", as per Figure 4.
 
-![Actions Map](./images/unityFundamentalsimage6.png)
+![Input Folder](./images/inputFolder.png)
 
-This is the Jump action, but we need to assign it to some kind of control input action - let's use the spacebar. Click on the small down arrow next to the + sign for Jump and select "add binding". Then click on the triangle to the right of Path and select "Keyboard".
+_Figure 4: Input folder_
 
-![Control Action](./images/unityFundamentalsimage7.png)
+By default the icon is an outline as the folder is currently empty. Double click the folder and then use the Project create Menu to create an "Input Actions" and call this myControl, as per Figure 5.
 
-If you now click on the "Listen" button Unity will listen for an input. Hit the space bar.
+![Input Action](./images/myControl.png)
 
-![Spacebar Action](./images/unityFundamentalsimage8.png)
+_Figure 5: myControl Input Action_
 
-Click on "Space [Keyboard]" and then save the asset by clicking the "Save Asset" tab (above where you have named the action Jump in the window).
+Double click on the myControl icon to open the input actions dialog, as per Figure 6.
+
+![Input Actions Dialogue](./images/inputActionsDialogue.png)
+
+_Figure 6: Input actions dialogue_
+
+Click on the + next to Action Maps to create a new map and then rename the Action to "Jump", as per Figure 7.
+
+![Actions Map](./images/jumpAction.png)
+
+_Figure 7: Jump action_
+
+This is the Jump action, but we need to assign it to some kind of control input action - let's use the spacebar. Click on the small down arrow next to the + sign for Jump and select "add binding". Then click on the triangle to the right of Path and select "Keyboard", as per Figure 8.
+
+![Control Action](./images/keyboardInputAction.png)
+
+_Figure 8: Keyboard input action_
+
+If you now click on the "Listen" button Unity will listen for an input, as per Figure 9. Hit the space bar.
+
+![Spacebar Action](./images/spacebarListen.png)
+
+_Figure 9: Listen for spacebar_
+
+Click on "Space [Keyboard]" and then save the asset by clicking the "Save Asset" tab (above where you have named the action Jump in the window). That is the input action set up. 
 
 ## Add Input to the Ball
 
-That is the input system set up. You now need to add it to the ball. Select the ball in the Hierarchy so that it appears in the inspector window and "add component". Select "Input" then "PlayerInput". Now drag the myControl action asset on to the Actions box in the Player Input component.
+You now need to add the input action to the ball. Select the ball in the Hierarchy so that it appears in the inspector window and "add component". Select "Input" then "PlayerInput". Now drag the myControl action asset on to the Actions box in the Player Input component.
 
-![player Input](./images/unityFundamentalsimage9.png)
+![player Input](./images/playerInputComponent.png)
+
+_Figure 10: Player input component_
 
 ## Scripting the Input System
 

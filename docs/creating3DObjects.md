@@ -36,7 +36,7 @@ To add some colour to the cube we need to add a material. In the Project view, c
 
 _Figure 5: New material_
 
-Towards the top of the Inspector window is a colour chooser next to the word _Albedo_, which is the property that controls the base color and transparency of the material. Click on the white rectangle and choose a bright red colour (RGB, 255,0,0), as per Figure 6. You should now see a red sphere called _New Material_ in the assets folder in the project view. Drag this red sphere on to the cube in the Scene view.
+Towards the top of the Inspector window is a colour chooser next to the word _Albedo_, which is the property that controls the base color and transparency of the material. Click on the white rectangle and choose a bright red colour (RGB, 255,0,0), as per Figure 6. You should now see a red sphere called _New Material_ in the assets folder in the project view. Drag this material onto the cube in the Scene view.
 
 ![Apply Material](./images/applyMaterial.png)
 
@@ -58,7 +58,7 @@ Now push _play_ and the cube will drop under the influence of gravity (until it 
 
 2. Re-enable the BoxCollider on the cube and try tilting the plane by setting the plane's x and z rotation values to 2. The friction in the _Rigidbody_ will stop the cube from sliding. What happens if you exit play then set the values to 20 rather than 2? Has your plane disappeared? At this point, you may wish to go and research _Backface Culling_. Play around with the values and make the plane reappear.
 
-3. Delete the cube and add a sphere in the same position instead. Now the sphere should hit the plane and roll off.
+3. Delete the cube and add a sphere with a y transform of 3. Now the sphere should hit the plane and roll off.
 
 4. Try adding a cube that the sphere will hit to deflect its movement. Note you can change the dimension of the cube to make it easier to hit.
 
