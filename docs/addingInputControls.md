@@ -1,8 +1,8 @@
 # Adding Input Controls
 
-Now you will use Unity's [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html) to add interactions to _GameObjects_.
+Now you will use Unity's [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html) to add interactions to the _sphere_ you create in ["Creating Basic 3D Objects"](./creating3DObjects.md).
 
-Delete the cube you [created](./creating3DObjects.md). Rename the plane "ground", and the sphere "ball".Reset the ground's transform so it's rotation values are all zero. You should have something that looks similar to Figure 1, below.
+First, delete the cube. Then, rename the plane "ground", and the sphere "ball". Finally, reset the ground's transform so it's rotation values are all zero; you should have something that looks similar to Figure 1, below.
 
 ![Ball and Plane](./images/groundAndBall.png)
 
@@ -200,6 +200,8 @@ public class myBall : MonoBehaviour
     } 
 }
 ```
+
+Again, it is a good idea to keep your project well organised, so in the _Project_ view, click the create menu and create a _Folder_ called _Scripts_. Drag your _myBall_ script into that folder, then save the project.
 
 ## Links
 
