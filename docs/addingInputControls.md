@@ -68,7 +68,7 @@ Click on "Space [Keyboard]" and then save the asset by clicking the "Save Asset"
 
 ## Add Input to the Ball
 
-You now need to add the input action to the ball. Select the ball in the Hierarchy so that it appears in the inspector window and "add component". Select "Input" then "PlayerInput". Now drag the myControl action asset on to the Actions box in the Player Input component.
+Now, you should add the input action to the ball. Select the ball in the Hierarchy so that it appears in the inspector window and "add component". Select "Input" then "PlayerInput". Drag the myControl action asset on to the Actions box in the Player Input component, just like Figure 10.
 
 ![player Input](./images/playerInputComponent.png)
 
@@ -76,7 +76,7 @@ _Figure 10: Player input component_
 
 ## Scripting the Input System
 
-You now need to create a script to make the ball do something. You should launch Visual Studio Code so that you're ready to write the script.  
+Now, you need to create a script to make the ball do something. You should launch Visual Studio Code so that you're ready to write the script.  
 
 Now go back to Unity and create a new script using the add component button on the Ball object and call it "myBall". Open the script by double clicking on the script in the assets folder. It should load in Visual Studio Code.  
 
