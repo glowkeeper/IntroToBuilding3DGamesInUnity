@@ -36,7 +36,7 @@ _Figure 4: New material_
 
 Towards the top of the Inspector window is a colour chooser next to the word _Albedo_, which is the property that controls the base color and transparency of the material. Click on the white rectangle and choose a bright red colour (RGB, 255,0,0). You should now see a red sphere called _New Material_ in the assets folder in the project view, as shown in Fugure 5. Drag this red sphere on to the cube in the Scene view.
 
-![Apply Material](./images/newMaterial.png)
+![Apply Material](./images/applyMaterial.png)
 
 _Figure 5: Apply material_
 

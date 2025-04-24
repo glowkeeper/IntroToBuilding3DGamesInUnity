@@ -2,7 +2,7 @@
 
 The organisation of the main windows in your running editor might differ to that shown in Figure 1 below,  because the layout can be rearranged according to your preferences. However, you should have several key windows:
 
-![The Unity Editor](./images/unityOverviewImage1.png)
+![The Unity Editor](./images/unityEditor.png)
 
 _Figure 1: The Unity Editor_
 
