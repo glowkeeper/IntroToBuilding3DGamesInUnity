@@ -176,7 +176,7 @@ Attach the above script to a GameObject in a Scene, and in the Inspector, set 
 
 However, [ScriptableObjects can do many more things](https://unity.com/blog/engine-platform/6-ways-scriptableobjects-can-benefit-your-team-and-your-code), including implementing the Observer pattern by managing in-game interactions through Events and event channels.
 
-## Links
+## External Links
 
 - [Scripting](https://docs.unity3d.com/Manual/ScriptingSection.html)
 - [C#](https://docs.microsoft.com/en-us/dotnet/csharp/) 

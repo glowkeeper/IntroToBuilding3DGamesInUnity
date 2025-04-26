@@ -49,5 +49,5 @@ Please note that it is beyond the scope of this workshop to support ProBuilder o
 
 ## Links
 
-- [Coordinate Systems](../coordinateSystems.md)
+- [Coordinate Systems](./maths/coordinateSystems.md)
 - [Graphics Background](../graphicsBackground.md)

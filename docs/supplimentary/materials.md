@@ -21,7 +21,7 @@ Rendering relies on a close relationship between meshes, materials, shaders, and
 
 ## UV Mapping
 
-The process of applying textures to meshes is known as "UV Mapping", where "UV" refers to the texture coordinates, called [texels](https://en.wikipedia.org/wiki/Texel_(graphics)), which use the coordinates (u, v) in 2D texture space and are named u and v to avoid naming collisions with the axis of a 3D world space: x,y,z. To know more about such coordinates, please refer to [coordinate systems](../coordinateSystems.md).
+The process of applying textures to meshes is known as "UV Mapping", where "UV" refers to the texture coordinates, called [texels](https://en.wikipedia.org/wiki/Texel_(graphics)), which use the coordinates (u, v) in 2D texture space and are named u and v to avoid naming collisions with the axis of a 3D world space: x,y,z. To know more about such coordinates, please refer to [coordinate systems](./maths/coordinateSystems.md).
 
 When a textured model is rendered, the u,v coordinates of the texture are mapped to the [vertices](https://en.wikipedia.org/wiki/Vertex_(computer_graphics)) of the model.
 By convention, (u,v) of (0,0) corresponds to the bottom-left corner of the texture, and (u,v) of (1,1) – to the top-right.
@@ -73,6 +73,6 @@ _Figure 4: a Skybox cube map_
 
 ## Links
 
-+ [Graphics Background](../graphicsBackground.md)
-+ [Coordinate Systems](../coordinateSystems.md)
-+ [Trigonometry](../trigonometry.md)
++ [Graphics Background](./graphicsBackground.md)
++ [Coordinate Systems](./maths/coordinateSystems.md)
++ [Trigonometry](./maths/trigonometry.md)

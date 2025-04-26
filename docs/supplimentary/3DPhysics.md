@@ -13,7 +13,7 @@ Physics in Unity might include:
 
 ## 3D Physics
 
-In this setting, 3D physics refers to the properties of objects and how they respond to [forces](../forces.md). Unity's built-in physics engine has a breadth of tools that ensure objects can interact with other objects by approximating natural forces, such as gravity, velocity, acceleration, and friction. Figure 1 shows the properties of Unity's 3D physics engine.
+In this setting, 3D physics refers to the properties of objects and how they respond to [forces](./maths/forces.md). Unity's built-in physics engine has a breadth of tools that ensure objects can interact with other objects by approximating natural forces, such as gravity, velocity, acceleration, and friction. Figure 1 shows the properties of Unity's 3D physics engine.
 
 ![](./images/physicsProperties.png)
 
@@ -64,18 +64,9 @@ GameObjects with a collider (but no _RigidBody_) count as static obstacles that 
 
 _Triggers_ function similarly to _colliders_. However, when _triggers_ interact with _colliders_, they are ignored by the physics engine. Instead, they can execute scripts, which means they are useful for triggering all types of events; examples are some actions when a _collider_ enters an area, tutorial messages or [cutscenes](https://en.wikipedia.org/wiki/Cutscene). You will take advantage of _triggers_ later in the course.
 
-## Exercise
-
-Add physical properties to GameObjects in your scene.
-
-## Lab Video
-
-[3D Physics](https://youtu.be/8WpegjTbV6Y)
-
-## Links
+## External Links
 
 + [Physics](https://docs.unity3d.com/Manual/PhysicsSection.html)
-+ [Forces](../forces.md)
 + [Built-in 3D Physics](https://docs.unity3d.com/Manual/PhysicsOverview.html)
 + [RigidBody](https://docs.unity3d.com/Manual/class-Rigidbody.html)
 + [Introduction to Rigidbody physics](https://docs.unity3d.com/Manual/RigidbodiesOverview.html)
@@ -86,3 +77,7 @@ Add physical properties to GameObjects in your scene.
 + [Velocity](https://en.wikipedia.org/wiki/Velocity)
 + [Angular velocity](https://en.wikipedia.org/wiki/Angular_velocity)
 + [Friction](https://en.wikipedia.org/wiki/Friction)
+
+## Links
+
++ [Forces](../forces.md)

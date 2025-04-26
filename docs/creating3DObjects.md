@@ -30,7 +30,7 @@ _Figure 4: A cube above a plane_
 
 ### Adding Materials
 
-To add some colour to the cube we need to add a material. In the Project view, click the create menu and select _Material_. A grey sphere should appear at the bottom of your Inspector view, just like Figure 5.
+To add some colour to the cube we need to add a [material](./supplimentary/materials.md). In the Project view, click the create menu and select _Material_. A grey sphere should appear at the bottom of your Inspector view, just like Figure 5.
 
 ![New Material](./images/newMaterial.png)
 
@@ -42,13 +42,15 @@ Towards the top of the Inspector window is a colour chooser next to the word _Al
 
 _Figure 6: Apply material_
 
-Save your scene - File - Save.
+Save your scene - _File > Save_.
 
 ## Add Physics
 
 Now choose _play_ in the _Toolbar_, and the running game will appear. 
 
 The cube just floats above the plane because, currently, there are no forces acting on the scene so nothing will move. Click on the play button again to exit game view. 
+
+To make _GameObjects_ move in Unity, you need to add some [physics](./supplimentary/3DPhysics.md).
 
 Add a _Rigidbody_ component to your cube (in the _Inspector_, add _component_, _physics_, _rigidbody_).
 
@@ -62,9 +64,28 @@ Now push _play_ and the cube will drop under the influence of gravity (until it 
 
 4. Try adding a cube that the sphere will hit to deflect its movement. Note you can change the dimension of the cube to make it easier to hit.
 
-If you've followed everything above, you should have something somewhat similar to Figure 7 (all the objects have had coloured matertials added to make them easier to see).
+If you've followed everything above, you should have something somewhat similar to Figure 7 (all the objects have had coloured matertials added to make them easier to see). 
 
 ![](./images/colouredObjects.png)
 
 _Figure 7: Coloured objects_ 
 
+However, you won't be needing the cube, so delete it (there are numerous ways to do that - quite how is left to you to figure out). Then, rename the plane "ground", and the sphere "ball". Finally, reset the ground's transform so it's rotation values are all zero; you should have something that looks similar to Figure 8, below.
+
+![Ball and Plane](./images/groundAndBall.png)
+
+_Figure 8: Ground and ball_
+
+Add a _RigidBody_ to your ball. When you press play the ball should drop on to the ground and stop.
+
+### Add a Physics Material
+
+In the _Project_ view, right click and select _create > Physic Material_. Set the _Bounciness_ of the material to 1, then drag the _Physic Material_ onto the ball. You should see the _Physic Material_ assigned to the _Material_ property of the ball's Sphere Collider in the _Inspector_, as per Figure 9. Press play, and your ball should bounce.
+
+![Ball Physics Material](./images/ballPhsyicsMaterial.png)
+
+_Figure 9: Ball Physics Material_
+
+It is a good idea to keep your project well organised, so in the _Project_ view, right click, _create > Folder_, and call it "Materials". Drag your materials into that folder.
+
+Finally, save your project.
