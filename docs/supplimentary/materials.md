@@ -11,7 +11,7 @@ The goal of this session is to add some materials to the modelling you did in th
 + [Shaders](https://docs.unity3d.com/Manual/Shaders.html) are small scripts that contain the algorithms for calculating the colour of each pixel that gets rendered
 + [Textures](https://docs.unity3d.com/Manual/Textures.html) are [bitmap](https://en.wikipedia.org/wiki/Bitmap) images that define the fine detail of a material's surface; think of them as images that are printed on a rubber sheet and stretched and pinned onto a mesh
 
-![Mesh and Material](./images/meshAndMaterials.png)
+![Mesh and Material](../images/meshAndMaterials.png)
 
 _Figure 1: Left: a 3D polygon mesh of a player character. Right: the player mesh rendered with materials_
 
@@ -32,14 +32,14 @@ Sometimes, the ranges of u and v can go beyond (0,1). In such cases, "texture ad
 
 Many types of textures are mapped onto models. They are used for different purposes. Below are some of the more common maps and their uses.
 
-![Maps](./images/maps.png)
+![Maps](../images/maps.png)
 
 _Figure 2: Different types of maps_
 
 + Diffuse/Colour/Albedo maps: The standard texture that adds colour to a model
 + Normal maps: Instead of colour, normal maps represent shape by adding extra detail to a low-detail version of a model so that it simulates the same reflections as the high-detail (and computationally expensive) version. Hence, normal maps store data about how light reflects from a surface, where each pixel represents the light's direction
 
-![Normal Map](./images/normalMap.jpg)
+![Normal Map](../images/normalMap.jpg)
 
 _Figure 3: A normal mapped model (left), the mesh without the map (centre), and the normal map alone (right). Image courtesy of [PolyCount](http://wiki.polycount.com/wiki/Normal_map)_
 
@@ -54,7 +54,7 @@ A skybox is a method of creating backgrounds that appear larger than they are. I
 
 A skybox is another texture map. Technically, it is a [cube map](https://en.wikipedia.org/wiki/Cube_mapping).
 
-![Cube map](./images/skyboxExample.png)
+![Cube map](../images/skyboxExample.png)
 
 _Figure 4: a Skybox cube map_
 

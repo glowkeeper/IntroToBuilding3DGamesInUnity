@@ -2,7 +2,7 @@
 
 The goal of this session is to get you to add some scripting capability to your scene.
 
-![Scripting](./images/scriptingIntro.jpg)
+![Scripting](../images/scriptingIntro.jpg)
 
 ## Scripting
 
@@ -36,7 +36,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 _MonoBehaviour_ defines other behaviour, too - the one you will likely see most frequently is _FixedUpdate_, which Unity's physics system calls at a rate independent from the main thread's (rendering) frame rate. For example, imagine the physics engine is running at fifty calls per second, and the frame rate is running at twenty-five frames per second (FPS) - then _FixedUpdate_ will be called twice per frame. Therefore, it is bad practice to put physics calculations in _Update_ - they should go in _FixedUpdate_, instead (similarly, user input should go in _Update_, and not _FixedUpdate_.). Figure 1, below, shows a flowchart for MonoBehaviour.
 
-![](./images/monobehaviourFlowchart.svg)
+![](../images/monobehaviourFlowchart.svg)
 
 _Figure 1: MonoBehaviour Flow Chart_
 
@@ -103,7 +103,7 @@ The _Singleton_ pattern is pervasive in the game's world (and beyond) - it's com
 
 Figure 2 below is a [class design](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/) showing examples of object-oriented composition and inheritance. The _GameManager_ is a Singleton that _has-a UI_, _has-a SpawnManager_ (which might also be a Singleton), _has-a  Player_ and _has-a list of Places_. Addititionally, _SinkHole_ _is-a EntryPoint_, as are _VideoController_ and _Platform_.
 
-![UML Singleton](./images/game.webp)
+![UML Singleton](../images/game.webp)
 
 _Figure 2: Singleton_
 

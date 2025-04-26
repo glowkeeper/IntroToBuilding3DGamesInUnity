@@ -4,7 +4,7 @@
 
 Model files can contain various data, including meshes, materials and textures (they can also include animation data). [Meshes](https://docs.unity3d.com/Manual/mesh.html) are a graphics primitive that defines the shape of an object. We will look at materials and textures more closely in the next lab.
 
-![Dolphin Mesh](./images/dolphinMesh.png)
+![Dolphin Mesh](../images/dolphinMesh.png)
 
 _Figure 1: A low poly triangle mesh representing a dolphin_
 

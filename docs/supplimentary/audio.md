@@ -1,7 +1,7 @@
 # Audio
 
 Unity includes systems that allow you to include complex sounds your scenes.
-![audio waveform](images/audio.jpg)
+![audio waveform](../images/audio.jpg)
 
 [_Figure 1: How to Set Audio Levels for Video_](https://www.premiumbeat.com/blog/how-to-set-audio-levels-for-video/)
 
@@ -27,7 +27,7 @@ Unity supports audio files in AIFF, WAV, MP3, and Ogg formats. To simulate posit
 
 Unity's Audio Mixer allows you to master and apply effects to various audio sources.
 
-![Audio Mixer](images/audioMixer.png)
+![Audio Mixer](../images/audioMixer.png)
 
 _Figure 2: Unity's Audio Mixer_
 
