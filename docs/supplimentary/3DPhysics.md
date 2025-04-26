@@ -7,7 +7,7 @@ Physics in Unity might include:
 + Kinematics
 + Triggers
 
-![car physics](./images/carPhysics.webp)
+![car physics](../images/carPhysics.webp)
 
 [_Figure 1: Making Custom Car Physics_](https://www.youtube.com/watch?v=CdPYlj5uZeI&t=2s)
 
@@ -15,7 +15,7 @@ Physics in Unity might include:
 
 In this setting, 3D physics refers to the properties of objects and how they respond to [forces](./maths/forces.md). Unity's built-in physics engine has a breadth of tools that ensure objects can interact with other objects by approximating natural forces, such as gravity, velocity, acceleration, and friction. Figure 1 shows the properties of Unity's 3D physics engine.
 
-![](./images/physicsProperties.png)
+![](../images/physicsProperties.png)
 
 _Figure 1: Unity's physics properties_
 
@@ -29,7 +29,7 @@ Unity uses specialised physic materials to adjust the physical collider properti
 
 A _RigidBody_, shown in Figure 2, below, is the main component that enables physical behaviour for a _GameObject_. A _RigidBody_ is a term borrowed from the real world - it is an idealised object that does not deform under the influence of external forces; instead, it maintains its shape and size, making it ideal for analysing mechanical systems in physics and engineering and also for modelling idealised physical systems in Unity. A Unity _RigidBody_ also detects and resolves collisions between colliders (see below).
 
-![](./images/rigidBody.png)
+![](../images/rigidBody.png)
 
 _Figure 2: RigidBody_
 
@@ -80,4 +80,4 @@ _Triggers_ function similarly to _colliders_. However, when _triggers_ interact 
 
 ## Links
 
-+ [Forces](../forces.md)
++ [Forces](./maths/forces.md)
