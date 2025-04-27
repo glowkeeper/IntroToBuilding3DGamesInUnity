@@ -28,7 +28,7 @@ There are a variety of methods and tools for moving around and orienting the _Sc
 
 The orientation gizmo, shown in Figure 2 below, shows the orientation of your scene. 
 
-![Orientation Gizmo](../images/editorSceneGizmo.png)
+![Orientation Gizmo](./images/editorSceneGizmo.png)
 
 _Figure 2: Orientation Gizmo_
 
@@ -69,7 +69,7 @@ _Align with View_ (and _Move to View_), available via _GameObject > Align with V
 
 The scene view tools, shown in Figure 3 below, allow you to view the scene, as well as move, rotate, scale or transform _GameObjects_.
 
-![Scene View Tools](../images/sceneViewTools.png)
+![Scene View Tools](./images/sceneViewTools.png)
 
 You can click on each of the tool gizmos to use them. Alternatively, use the _QWERTY_ keys on your keyboard:
 
