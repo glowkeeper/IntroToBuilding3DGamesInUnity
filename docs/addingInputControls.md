@@ -16,6 +16,8 @@ Create another folder via the _Project_ view, and call it "Input", as per Figure
 
 _Figure 2: Input folder_
 
+## Create an Input Action
+
 By default the icon is an outline, as the folder is currently empty. Double click the folder and then use the _Project_ create menu to create an _Input Action_. Call this "myControl", as per Figure 3.
 
 ![Input Action](./images/myControl.png)
@@ -48,7 +50,7 @@ _Figure 7: Listen for spacebar_
 
 Click on "Space [Keyboard]" and then save the asset by clicking the _Save Asset_ tab (above where you have named the action Jump in the window). That is the input action set up. 
 
-## Add Input to the Ball
+### Add Input to the Ball
 
 Now add the input action to the ball. Select the ball in the Hierarchy so that it appears in the inspector window and _add component_. Select _Input_, then _PlayerInput_. Drag the myControl action asset onto the Actions box in the _Player Input_ component, just like Figure 8.
 
@@ -56,9 +58,9 @@ Now add the input action to the ball. Select the ball in the Hierarchy so that i
 
 _Figure 8: Player input component_
 
-## Scripting the Input System
+## Scripting the Input Actions
 
-To gain hands-on control of _GameObjects_ in Unity, you need to do some [scripting](./supplimentary/scripting.md). Hence, you need to create a script to take control of the ball. 
+To gain real control of _GameObjects_ in Unity, you need to do some [scripting](./supplimentary/scripting.md). Hence, you need to create a script to take control of the ball. 
 
 Create a new script using the _add component_ button on the Ball object and call the script "myBall". Open the script by double clicking on the script in the assets folder. It should load in Visual Studio Code.  
 
@@ -143,7 +145,7 @@ public class myBall : MonoBehaviour
 
 Save the script and then play the scene and the ball should turn blue and jump when you press the space bar, just like Figure 10. 
 
-![Play the Scene](./images/unityFundamentalsimage11.png)
+![Play the Scene](../images/blueBall.png)
 
 _Figure 10: The blue jumping ball_
 
@@ -183,7 +185,145 @@ public class myBall : MonoBehaviour
 }
 ```
 
-Again, it is a good idea to keep your project well organised, so in the _Project_ view, create a folder called "Scripts". Drag your "myBall" script into that folder, then save the project.
+Again, it is a good idea to keep your project well organised, so in the _Project_ view, create a folder called "Scripts". Drag your "myBall" script into that folder, then, since you've made substantial changes, save the project.
+
+## Adding Additional Input Actions
+
+The ball should do more than jump; it should also move left, right, forward and back, using the arrow keys on the keyboard. 
+
+However, for those actions to make sense, you should first orient the scene so that the _x_ axis points left and the z axis points back. Additionally, you should align the _Main Camera_ to that same view via _GameObject > Align to View_. Your _Scene_ view should look somewhat similar to that shown in Figure 11 below.
+
+![Scene View with X Axis Pointing Left](../images/sceneViewWithXAxisLeft.png)
+
+_Figure 11: Scene view with the x axis left, right axis back, and the main camera aligned with the view_
+
+To enable the new actions, follow the same method as you did for the jump input action above. 
+
+So, to create a _left_ action, double click on the myControl icon to open the Input Actions dialog, then click on the + next to Action to create a new action below "Jump" and rename it "Left". Then click on the small down arrow next to the + sign for Left and select add binding. Then click on the triangle to the right of Path and select Keyboard. If you now click on the _Listen_ button, Unity will listen for an input. Hit the left arrow key. Do the same for right, forward and back. Afterwards, _Save Asset_. You should have a action map that looks like Figure 12.
+
+[Left, Right, Forward Back Input Actions](../images/leftRightForwardBack.png)
+
+_Figure 12: Left, Right, Forward Back Input Actions_
+
+## Scripting the Additional Input Actions
+
+The input actions above will invoke, `OnLeft`, `OnRight`, `OnForward` and `OnBack`, so add those to your script and to check that the actions are being called, add a `Debug.Log` command within each method. The script should look similar to that below, and if all is well, when you press _play_ in the _Toolbar_, you should see the correct messages in the _Console_ when you hit the arrow keys.
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.InputSystem;
+
+public class myBall : MonoBehaviour
+{
+
+    [SerializeField] private float jumpFactor = 300.0f;
+    private Rigidbody rb;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void OnJump() 
+    { 
+        Debug.Log("Jump Pressed"); 
+        GetComponent<Renderer>().material.color = Color.blue;
+        rb.AddForce(0.0f, jumpFactor, 0.0f);
+    } 
+
+    void OnLeft() 
+    { 
+        Debug.Log("Left Pressed"); 
+    } 
+
+    void OnRight() 
+    { 
+        Debug.Log("Right Pressed"); 
+    } 
+
+    void OnForward() 
+    { 
+        Debug.Log("Forward Pressed"); 
+    } 
+
+    void OnBack() 
+    { 
+        Debug.Log("Back Pressed"); 
+    } 
+}
+```
+
+Now it's just a matter of adding the right forces in the right directions. So for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, apply a positive factor in the x component of the `AddForce` method. and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables, all `Debug` messages removed (they're no longer required as you know the calls work), and the change of material colour also removed.
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+using UnityEngine.InputSystem;
+
+public class myBall : MonoBehaviour
+{
+
+    [SerializeField] private float jumpFactor = 300.0f;
+    [SerializeField] private float sideFactor = 300.0f;
+    [SerializeField] private float backFactor = 300.0f;
+    private Rigidbody rb;
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void OnJump() 
+    { 
+        rb.AddForce(0.0f, jumpFactor, 0.0f);
+    } 
+
+    void OnLeft() 
+    { 
+        rb.AddForce(sideFactor, 0.0f, 0.0f);
+    } 
+
+    void OnRight() 
+    { 
+        rb.AddForce(-sideFactor, 0.0f, 0.0f);
+    } 
+
+    void OnForward() 
+    {       
+        rb.AddForce(0.0f, 0.0f, -backFactor);
+    } 
+
+    void OnBack() 
+    {    
+        rb.AddForce(0.0f, 0.0f, backFactor); 
+    } 
+}
+```
+
+You should now have full control of the ball and there's the basis for a simple game. 
+
+You've made substantial changes, so save the project.
 
 ## Links
 
