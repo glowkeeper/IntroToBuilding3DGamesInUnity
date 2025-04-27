@@ -145,7 +145,7 @@ public class myBall : MonoBehaviour
 
 Save the script and then play the scene and the ball should turn blue and jump when you press the space bar, just like Figure 10. 
 
-![Play the Scene](../images/blueBall.png)
+![Play the Scene](./images/blueBall.png)
 
 _Figure 10: The blue jumping ball_
 
@@ -193,7 +193,7 @@ The ball should do more than jump; it should also move left, right, forward and 
 
 However, for those actions to make sense, you should first orient the scene so that the _x_ axis points left and the z axis points back. Additionally, you should align the _Main Camera_ to that same view via _GameObject > Align to View_. Your _Scene_ view should look somewhat similar to that shown in Figure 11 below.
 
-![Scene View with X Axis Pointing Left](../images/sceneViewWithXAxisLeft.png)
+![Scene View with X Axis Pointing Left](./images/sceneViewWithXAxisLeft.png)
 
 _Figure 11: Scene view with the x axis left, right axis back, and the main camera aligned with the view_
 
@@ -201,7 +201,7 @@ To enable the new actions, follow the same method as you did for the jump input 
 
 So, to create a _left_ action, double click on the myControl icon to open the Input Actions dialog, then click on the + next to Action to create a new action below "Jump" and rename it "Left". Then click on the small down arrow next to the + sign for Left and select add binding. Then click on the triangle to the right of Path and select Keyboard. If you now click on the _Listen_ button, Unity will listen for an input. Hit the left arrow key. Do the same for right, forward and back. Afterwards, _Save Asset_. You should have a action map that looks like Figure 12.
 
-[Left, Right, Forward Back Input Actions](../images/leftRightForwardBack.png)
+[Left, Right, Forward Back Input Actions](./images/leftRightForwardBack.png)
 
 _Figure 12: Left, Right, Forward Back Input Actions_
 
