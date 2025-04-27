@@ -195,7 +195,7 @@ However, for those actions to make sense, you should first orient the scene so t
 
 ![Scene View with X Axis Pointing Left](./images/sceneViewWithXAxisLeft.png)
 
-_Figure 11: Scene view with the x axis left, right axis back, and the main camera aligned with the view_
+_Figure 11: Scene view with the x axis left, z axis back, and the main camera aligned with the view_
 
 To enable the new actions, follow the same method as you did for the jump input action above. 
 
@@ -207,7 +207,7 @@ _Figure 12: Left, Right, Forward Back Input Actions_
 
 ## Scripting the Additional Input Actions
 
-The input actions above will invoke, `OnLeft`, `OnRight`, `OnForward` and `OnBack`, so add those to your script and to check that the actions are being called, add a `Debug.Log` command within each method. The script should look similar to that below, and if all is well, when you press _play_ in the _Toolbar_, you should see the correct messages in the _Console_ when you hit the arrow keys.
+The input actions above will invoke `OnLeft`, `OnRight`, `OnForward` and `OnBack`, so add those to your "myBall" script and check that the actions are being called by adding a `Debug.Log` command within each method. The script should look similar to that below, and if all is well, when you press _play_ in the _Toolbar_ and press the arrow keys, you should see the corresponding messages in the _Console_.
 
 ```csharp
 using System.Collections;
@@ -264,7 +264,7 @@ public class myBall : MonoBehaviour
 }
 ```
 
-Now it's just a matter of adding the right forces in the right directions. So for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, apply a positive factor in the x component of the `AddForce` method. and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables, all `Debug` messages removed (they're no longer required as you know the calls work), and the change of material colour also removed.
+Now it's just a matter of adding the right forces in the right directions. So, for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, you should apply a positive factor in the x component of the `AddForce` method, and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables, all `Debug` messages removed (they're no longer required as you know the calls work). Additionally, the change of material colour has been removed.
 
 ```csharp
 using System.Collections;
