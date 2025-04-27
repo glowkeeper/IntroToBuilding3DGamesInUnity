@@ -1,6 +1,6 @@
 # Materials and Textures
 
-The goal of this session is to add some materials to the modelling you did in the last lab.
+Materials help define the appearance of _GameObjects_ in your scenes.
 
 ## Rendering Models
 

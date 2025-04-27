@@ -1,12 +1,10 @@
 # Scripting
 
-The goal of this session is to get you to add some scripting capability to your scene.
+Scripts unlock a lot of the potential of the Unity engine because they enable you to perform actions such as create graphical effects, control physical gameplay behaviour or react to user input.
 
 ![Scripting](../images/scriptingIntro.jpg)
 
-## Scripting
-
-Scripts unlock a lot of the potential of the Unity engine because they enable you to perform actions such as create graphical effects, control physical gameplay behaviour or react to user input.
+## Unity Scripts
 
 Below is the basic script created by Unity whenever you _Create_, _C# Script_. It demonstrates a couple of essential features.
 
