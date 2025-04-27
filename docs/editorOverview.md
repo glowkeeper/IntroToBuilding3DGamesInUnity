@@ -28,7 +28,7 @@ There are a variety of methods and tools for moving around and orienting the _Sc
 
 The orientation gizmo, shown in Figure 2 below, shows the orientation of your scene. 
 
-![Orientation Gizmo](../images/ditorSceneGizmo.png)
+![Orientation Gizmo](../images/editorSceneGizmo.png)
 
 _Figure 2: Orientation Gizmo_
 
