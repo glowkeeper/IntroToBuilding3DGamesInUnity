@@ -264,7 +264,7 @@ public class myBall : MonoBehaviour
 }
 ```
 
-Now it's just a matter of adding the right forces in the right directions. So, for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, you should apply a positive factor in the x component of the `AddForce` method, and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables, all `Debug` messages removed (they're no longer required as you know the calls work). Additionally, the change of material colour has been removed.
+Now it's just a matter of adding the right forces in the right directions. So, for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, you should apply a positive factor in the x component of the `AddForce` method, and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables and all `Debug` messages removed (they're no longer required as you know the calls work). Additionally, the change of material colour has been removed.
 
 ```csharp
 using System.Collections;
@@ -321,11 +321,10 @@ public class myBall : MonoBehaviour
 }
 ```
 
-You should now have full control of the ball and there's the basis for a simple game. 
+You should now have full control of the ball and there's the basis for a [simple game](./creatingTheGame.md). 
 
 You've made substantial changes, so save the project.
 
-## Links
+## External Links
 
 - You might wish to complete lessons 1.1 to 1.4 of [Unity 1 - Player control](https://learn.unity.com/project/unit-1-driving-simulation?missionId=5f71fe63edbc2a00200e9de0&pathwayId=5f7e17e1edbc2a5ec21a20af&contentId=5f7229b2edbc2a001f834db7).
-- The [Unity Roll-a-ball tutorial](https://learn.unity.com/tutorial/setting-up-the-game?uv=2020.2&projectId=5f158f1bedbc2a0020e51f0d) is a nice introduction in how to move rigidbodies in a simple game. If you want to do that, create a 3D Core project and call it  "Rollaball" and then follow the Roll-a-Ball tutorial.

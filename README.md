@@ -27,6 +27,7 @@ If you plan on taking part in the workshop via your own laptop in your own time,
 - [Editor Overview](./docs/editorOverview.md)
 - [Creating 3D Objects](./docs/creating3DObjects.md)
 - [Adding Input Controls](./docs/addingInputControls.md)
+- [Creating the Game](./docs/creatingTheGame.md)
 
 ## Background Material
 
