@@ -1,12 +1,14 @@
 # Creating the Game
 
-Now that you've [got used to the Unity editor](./editorOverview.md), ["created some basic 3D objects"](./creating3DObjects.md) and [added some input controls](./addingInputControls.md), it's time to turn the scene into a game.
+Now that you've [got used to the Unity editor](./editorOverview.md), [created some basic 3D objects](./creating3DObjects.md) and [added some input controls](./addingInputControls.md), it's time to turn the scene into a game.
 
-The game you are going to create is very simple. You are going to create an enclosed arena containing four zones, left, right, front and back. that your ball must enter as quickly as possible.
+The game you are going to create is very simple. It will feature an enclosed arena containing four zones (left, right, front and back), which your ball must enter as quickly as possible.
 
 ## Model the Game Arena
 
-To model the walls and roof of the game arena, we are going to make copies of the existing ground. So, in the _Hierarchy_, right-click on "Ground" and select _copy_. Then, right-click again in the  _Hierarchy_, and select _paste_ - you will have a new _GameObject_, named "Ground (1)". Right-click on that, select _Rename_, and call it "Left Wall". Now, you need to position it so it does indeed become the left wall. The easiest way to do that is to type in values directly into the _GameObject's Transform_ in the inspector; the x and y positions should be 5, and the z rotation should be 90 degrees, just like Figure 1.  
+To model the walls and roof of the game arena, you are going to make copies of the existing ground and then _transform_ those copies so they are in the correct position. 
+
+So, in the _Hierarchy_, right-click on "Ground" and select _copy_. Then, right-click again in the  _Hierarchy_, and select _paste_ - you will have a new _GameObject_, named "Ground (1)". Right-click on that, select _Rename_, and call it "Left Wall". Now, you need to position it so it does indeed become the left wall. The easiest way to do that is to type in values directly into the _GameObject's Transform_ in the inspector; the x and y positions should be 5, and the z rotation should be 90 degrees, just like Figure 1.  
 
 ![Left Wall Transform](./images/leftWallTransform.png)
 
@@ -18,13 +20,13 @@ Next, repeat the process for the right wall. However, this time, the x position 
 
 _Figure 2: Right wall transform_
 
-Next, repeat the process for the back wall. However, this time, the y position should be 5 and the z position should be -5. The x rotation should be 90 degrees, just like Figure 3.
+Then, repeat the process for the back wall. However, this time, the y position should be 5 and the z position should be -5. The x rotation should be 90 degrees, just like Figure 3.
 
 ![Back Wall Transform](./images/backWallTransform.png)
 
 _Figure 3: Back wall transform_
 
-Next, repeat the process for the front wall. For this wall, you are going to take advantage of [back face culling](https://en.wikipedia.org/wiki/Back-face_culling), whereby, to preserve processing cycles, Unity will only render one side of a _GameObject_. Hence, if the wall is positioned so that the rendered side looks inward, the player will be able to see into the arena, but the ball will still rebound off the wall. So, for this wall (and to take advantage of back face culling), the y and z positions should be 5 and the x rotation should be -90 degrees, just like Figure 4.
+Next, the front wall. Here, you are going to take advantage of [back face culling](https://en.wikipedia.org/wiki/Back-face_culling), whereby, to preserve processing cycles, Unity will only render one side of a _GameObject_. Hence, if the wall is positioned so that the rendered side looks inward, the player will be able to see into the arena, but the ball will still rebound off the wall. To take advantage of this, the y and z positions should be 5 and the x rotation should be -90 degrees, just like Figure 4.
 
 ![Front Wall Transform](./images/frontWallTransform.png)
 
@@ -40,7 +42,7 @@ Now position everything so that the player is looking directly into the arena, a
 
 At this point, the _Hierarchy_ is beginning to look a little unorganised, so, just as you have done for the _Project_, you should tidy up. To do so, click on your first wall in the hierarchy, then shift-click on the last wall to highlight all four walls. Then right-click > _Create Empty parent_ and call it "Walls". Next, highlights "Ground", "Roof" and "Walls", right-click > _Create Empty Parent_ and call it "Arena". 
 
-All being well, you will have a scene that looks something like Figure 6, below:
+All being well, you will have a _Hierarchy and _scene_ that looks something like Figure 6, below:
 
 ![Arena Walls](./images/arenaWalls.png)
 
@@ -58,7 +60,7 @@ First, create the front trigger zone using a _plane GameObject_. Name the object
 
 _Figure 7: Front trigger transform_
 
-The idea here is to make the trigger zone a thin strip (its z scale is 0.1), position it at the front (its z position is 4.5) and move it so it is just off the floor (its y position is 0.001 - if you left this with a y position of zero, you might experience a phenomenon called [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting), a flickering effect that happens when two or more objects are fighting to be rendered at the same position). 
+The idea here is to make the trigger zone a thin strip (its z scale is 0.1), position it at the front of the arena (its z position is 4.5) and move it so it is just off the floor (its y position is 0.001 - if you left this with a y position of zero, you might experience a phenomenon called [Z-fighting](https://en.wikipedia.org/wiki/Z-fighting), a flickering effect that happens when two or more objects are fighting to be rendered at the same position). 
 
 Also, select the _Convex_ and _Is Trigger_ options of the "Front Triggger" Mesh Collider component in the _Inspector_, as per Figure 8.
 
@@ -89,13 +91,13 @@ For the right trigger zone, copy the front or left trigger zones in the _Hierarc
 
 _Figure 10: Right trigger transform_
 
-The back trigger is going to go on a platform (so the player has to use the jump interaction to activate the trigger). So, in the hierarchy, right-click > _3D Object > Cube_. Name it "Back Stand". Drag the green material onto it (to differentiate it from the trigger zones). Then make its transform look like that of Figure 11.
+The back trigger is going to go on a stand (so the player has to use the jump interaction to activate the trigger). So, in the hierarchy, right-click > _3D Object > Cube_. Name it "Back Stand". Drag the green material onto it (to differentiate it from the trigger zones). Then make its transform look like that of Figure 11.
 
 ![Back Stand Transform](./images/backStand.png)
 
 _Figure 11: Back stand transform_
 
-Now, For the back trigger zone, copy the front, left or right trigger zones in the _Hierarchy_, rename it "Back Trigger", then make its transform look like Figure 12.
+Now, For the back trigger zone, copy the front, left or right trigger zones in the _Hierarchy_, rename it "Back Trigger", then make its transform look like Figure 12. The idea here is to place the trigger on the stand you just created above. 
 
 ![Back Trgger Transform](./images/backTrigger.png)
 
