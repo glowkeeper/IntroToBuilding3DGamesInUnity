@@ -264,7 +264,7 @@ public class myBall : MonoBehaviour
 }
 ```
 
-Now it's just a matter of adding the right forces in the right directions. So, for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, you should apply a positive factor in the x component of the `AddForce` method, and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables and all `Debug` messages removed (they're no longer required as you know the calls work). Additionally, the change of material colour has been removed.
+Now it's just a matter of adding the right forces in the right directions. So, for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, you should apply a positive factor in the x component of the `AddForce` method, and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables and all `Debug` messages removed (they're no longer required as you know the calls work). Additionally, the change of material colour has been removed, and the `Update` method has been deleted, as it is not required here..
 
 ```csharp
 using System.Collections;
@@ -286,12 +286,6 @@ public class myBall : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnJump() 

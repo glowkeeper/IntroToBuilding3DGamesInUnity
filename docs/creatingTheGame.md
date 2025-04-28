@@ -119,6 +119,31 @@ Now, if you press _play_ in the _Toolbar_, you should see "In Trigger" in the co
 
 ## Set Up the Game Controls
 
+Instead of just logging "In Trigger" in the _Console_, the "zones" script should record that the ball has collided with its trigger. To do so, make the script look like this:
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class zones : MonoBehaviour
+{
+    private bool hasTriggered = false;
+
+    public bool HasTriggered
+    {
+        get { return hasTriggered; } 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        hasTriggered = true;
+    }
+
+}
+```
+
+The script above uses a boolean variable, `hasTriggered`, to record that its `OnTriggerEnter` method has been called. It also declares a [C# Property](https://www.w3schools.com/cs/cs_properties.php) (the `HasTriggered` method) to return the value of that variable. Additionally, the `Start` and `Update` methods have been removed, as they are not required.
 
 ## Create the User Output
 
