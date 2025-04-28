@@ -70,7 +70,7 @@ If you've followed everything above, you should have something somewhat similar 
 
 _Figure 7: Coloured objects_ 
 
-However, you won't be needing the cube, so delete it (there are numerous ways to do that - quite how is left to you to figure out). Then, rename the plane "ground", and the sphere "ball". Finally, reset the ground's transform so it's rotation values are all zero; you should have something that looks similar to Figure 8, below.
+However, you won't be needing the cube, so delete it (there are numerous ways to do that - quite how is left to you to figure out). Then, rename the plane "Ground", and the sphere "ball". Finally, reset the ground's transform so it's rotation values are all zero; you should have something that looks similar to Figure 8, below.
 
 ![Ball and Plane](./images/groundAndBall.png)
 
