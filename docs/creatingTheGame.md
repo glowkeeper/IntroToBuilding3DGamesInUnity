@@ -197,11 +197,11 @@ To make the script work, you should create an empty _GameObject_ called "GameMan
 
 _Figure 15: The GameManager with the Triggers Assigned_
 
-Now, if you press _play_ in the _Toolbar_, after you visit all four trigger zones with the ball, you should see "Game Complete!" in the _Console_. However, if you did not assign the triggers properly, your game _might__ have crashed; at the very least, it will have output lots of error messages to the _Console_. That's because the "GameManager" script does not check for null operators. There are a number of ways to fix that, but those are left as an exercise (you may wish to research C#'s [Null-Conditional Operator](https://learn.microsoft.com/en-us/archive/msdn-magazine/2014/october/csharp-the-new-and-improved-csharp-6-0#null-conditional-operator) and [Null reference types](https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references)). 
+Now, if you press _play_ in the _Toolbar_, after you visit all four trigger zones with the ball, you should see "Game Complete!" in the _Console_. However, if you did not assign the triggers properly, your game _might_ have crashed; at the very least, it will have output lots of error messages to the _Console_. That's because the "GameManager" script does not check for null operators. There are a number of ways to fix that, but those are left as an exercise (you may wish to research C#'s [Null-Conditional Operator](https://learn.microsoft.com/en-us/archive/msdn-magazine/2014/october/csharp-the-new-and-improved-csharp-6-0#null-conditional-operator) and [Null reference types](https://learn.microsoft.com/en-us/dotnet/csharp/nullable-references)). 
 
 Additionally, imagine you had thousands of trigger zones - in that instance, it would not be a good idea to individually reference each of them. Better would be to use lists and one of Unity's _GameObject.Find_ methods (such as [FindGameObjectsWithTag](https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html)). However, again, that is left as an exercise. Besides, in the initial stages of coding a game or application, the belt and braces approach, such as that used above, is often a great starting point - the code can always be optimised later.
 
-Now, you should introduce a timer into "GameManager". For that, you can accumulate [Time.deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html), which is he interval in seconds from the last frame to the current one and the `Update`  method, which runs once per frame. Additionally, you want to make use of a boolean variable, which checks whether the game is complete. Below are the updates to the script.
+Now, you should introduce a timer into "GameManager". For that, you can use the `Update` method (which runs once per frame) to accumulate [Time.deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html), which is the interval in seconds from the last frame. Additionally, make use of a boolean variable to check whether the game is complete. Below are the updates to the script.
 
 ```csharp
 using System.Collections;
@@ -257,7 +257,7 @@ Now, if you press _play_ in the _Toolbar_, after you visit all four trigger zone
 
 ## Game User Interface (UI)
 
-The final element for the game is to output some text to the screen so that the player knows what's going on. To do that, you should introduce some text elements onto the screen, so in the _Hierarchy_ right-click > _UI > Text - TextMeshPro_; a _TMP Importer_ dialogue will appear and you should click on the _Import TMP Essentials_ button, as well as the _Import TMP Examples & Extras_ button. Then close the dialogue box. Rename the _Text (TMP) GameObject_ to "Game Time", and in its _Inspector_, change the default text from "New Text" to "Time: 0". Create another _Text - TextMeshPro GameObject_ under the _Canvas_ element, and call it "Game Complete". Change its default text to "Finished!". 
+The final element for the game is to output some text to the screen so that the player knows what's going on. To do that, you should introduce some text elements onto the screen. So, in the _Hierarchy_ right-click > _UI > Text - TextMeshPro_; a _TMP Importer_ dialogue will appear and you should click on the _Import TMP Essentials_ button, as well as the _Import TMP Examples & Extras_ button. Then close the dialogue box. Rename the _Text (TMP) GameObject_ to "Game Time", and in its _Inspector_, change the default text from "New Text" to "Time: 0". Create another _Text - TextMeshPro GameObject_ under the _Canvas_ element, and call it "Game Complete". Change its default text to "Finished!". 
 
 If you zoom out of the scene, you can see the whole canvas and position the two TextMeshPro _GameObjects_ on it. Figure 15 shows them positioned in the centre of the screen, above the arena.
 
@@ -265,7 +265,7 @@ If you zoom out of the scene, you can see the whole canvas and position the two 
 
 _Figure 15: Postioned UI Elements_
 
-Finally, you need to reference and update those objects in "GameManager", and in its _Inspector_ , drag the "Game Time" _GameObject_ into the serialised field "Time", and the "Game Complete" _GameObject_ into the serialised field "Complete". The finished script is below.
+Finally, you need to reference and update those _TextMeshPro GameObjects_ in the "GameManager" script, and in its _Inspector_ , drag the "Game Time" _GameObject_ into the serialised field "Time", and the "Game Complete" _GameObject_ into the serialised field "Complete". The finished script is below.
 
 ```csharp
 using System.Collections;
@@ -334,7 +334,7 @@ _Figure 16: The finished game_
 
 You've made substantial changes, so save the project.
 
-The finished game may not win any design awards; furthermore, the "Game Manager" script is responsible for too much - in a real game, you would want to consider seperating game logic from UI, perhaps using an _Observer Pattern_ (which you can read about in the document on [scripting](./supplimentary/scripting.md)). However, it serves as a good introduction to building games in Unity, and it's a fine basis upon which to build. So, now you know how, go fulfill your creative urge and start building games! 
+The finished game may not win any design awards; furthermore, the "Game Manager" script is responsible for too much - in a real game, you would want to consider seperating game logic from UI, perhaps using an _Observer Pattern_ (which you can read about in the document on [scripting](./supplimentary/scripting.md)). However, the game above serves as a good introduction to building games in Unity, and it's a fine basis upon which to build. So, now you know how, go fulfill your creative urge and start building more games! 
 
 ## External Links
 
