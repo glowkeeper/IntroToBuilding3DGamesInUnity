@@ -332,6 +332,8 @@ If you've done everything correctly, you should have a game that runs something 
 
 _Figure 16: The finished game_
 
+You've made substantial changes, so save the project.
+
 The finished game may not win any design awards; furthermore, the "Game Manager" script is responsible for too much - in a real game, you would want to consider seperating game logic from UI, perhaps using an _Observer Pattern_ (which you can read about in the document on [scripting](./supplimentary/scripting.md)). However, it serves as a good introduction to building games in Unity, and it's a fine basis upon which to build. So, now you know how, go fulfill your creative urge and start building games! 
 
 ## External Links
