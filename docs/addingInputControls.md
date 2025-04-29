@@ -62,7 +62,7 @@ _Figure 8: Player input component_
 
 To gain real control of _GameObjects_ in Unity, you need to do some [scripting](./supplimentary/scripting.md). Hence, you need to create a script to take control of the ball. 
 
-Create a new script using the _add component_ button on the Ball object and call the script "myBall". Open the script by double clicking on the script in the assets folder. It should load in Visual Studio Code.  
+Create a new script using the _add component_ button on the Ball object and call the script "Ball". Open the script by double clicking on the script in the assets folder. It should load in Visual Studio Code.  
 
 Add the Input System to the code by adding the following line at the top of your script:
 
@@ -97,7 +97,7 @@ Ultimately, you will get the ball to jump, but do something simpler, first. Belo
 
 Save the script and _play_. The line above assigns the colour blue to the material of the _GameObject_ to which the script is attached. So your ball should turn blue. 
 
-Now make the ball actually jump. Although you can use `transform.Translate` and `transform.Rotate` to move _GameObjects_, in this instance it is better to employ the Unity physics engine because you will be applying a _force_ to the ball. In Unity, you apply forces to a _RigidBody_, which has already been added the ball. So, the general idea of the script is to add a reference to that `Rigidbody` and then apply a force to that. To do so, add the following line after the opening `{` of the "myBall" class:
+Now make the ball actually jump. Although you can use `transform.Translate` and `transform.Rotate` to move _GameObjects_, in this instance it is better to employ the Unity physics engine because you will be applying a _force_ to the ball. In Unity, you apply forces to a _RigidBody_, which has already been added the ball. So, the general idea of the script is to add a reference to that `Rigidbody` and then apply a force to that. To do so, add the following line after the opening `{` of the "Ball" class:
 
 `private Rigidbody rb;`
 
@@ -118,7 +118,7 @@ using UnityEngine;
 
 using UnityEngine.InputSystem; 
 
-public class myBall : MonoBehaviour 
+public class Ball : MonoBehaviour 
 { 
     private Rigidbody rb; 
 
@@ -158,7 +158,7 @@ using UnityEngine;
 
 using UnityEngine.InputSystem;
 
-public class myBall : MonoBehaviour
+public class Ball : MonoBehaviour
 {
 
     [SerializeField] private float jumpFactor = 300.0f;
@@ -185,7 +185,7 @@ public class myBall : MonoBehaviour
 }
 ```
 
-Again, it is a good idea to keep your project well organised, so in the _Project_ view, create a folder called "Scripts". Drag your "myBall" script into that folder, then, since you've made substantial changes, save the project.
+Again, it is a good idea to keep your project well organised, so in the _Project_ view, create a folder called "Scripts". Drag your "Ball" script into that folder, then, since you've made substantial changes, save the project.
 
 ## Adding Additional Input Actions
 
@@ -207,7 +207,7 @@ _Figure 12: Left, Right, Forward Back Input Actions_
 
 ## Scripting the Additional Input Actions
 
-The input actions above will invoke `OnLeft`, `OnRight`, `OnForward` and `OnBack`, so add those to your "myBall" script and check that the actions are being called by adding a `Debug.Log` command within each method. The script should look similar to that below, and if all is well, when you press _play_ in the _Toolbar_ and press the arrow keys, you should see the corresponding messages in the _Console_.
+The input actions above will invoke `OnLeft`, `OnRight`, `OnForward` and `OnBack`, so add those to your "Ball" script and check that the actions are being called by adding a `Debug.Log` command within each method. The script should look similar to that below, and if all is well, when you press _play_ in the _Toolbar_ and press the arrow keys, you should see the corresponding messages in the _Console_.
 
 ```csharp
 using System.Collections;
@@ -216,7 +216,7 @@ using UnityEngine;
 
 using UnityEngine.InputSystem;
 
-public class myBall : MonoBehaviour
+public class Ball : MonoBehaviour
 {
 
     [SerializeField] private float jumpFactor = 300.0f;
@@ -264,7 +264,7 @@ public class myBall : MonoBehaviour
 }
 ```
 
-Now it's just a matter of adding the right forces in the right directions. So, for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, you should apply a positive factor in the x component of the `AddForce` method, and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables and all `Debug` messages removed (they're no longer required as you know the calls work). Additionally, the change of material colour has been removed, and the `Update` method has been deleted, as it is not required here..
+Now it's just a matter of adding the right forces in the right directions. So, for left and right, you need forces applied to the x axis, and for forward and back, forces applied to the z axis. Furthermore, if you oriented the scene as per Figure 11, then for left, you should apply a positive factor in the x component of the `AddForce` method, and for right, apply a negative factor in the x component. Similarly, for forward, apply a negative factor in the z component, and for back, apply a positive factor. Below is the completed script with requisite variables and all `Debug` messages removed (they're no longer required as you know the calls work). Additionally, the change of material colour has been removed, and the `Update` method has been deleted, as it is not required.
 
 ```csharp
 using System.Collections;
@@ -273,7 +273,7 @@ using UnityEngine;
 
 using UnityEngine.InputSystem;
 
-public class myBall : MonoBehaviour
+public class Ball : MonoBehaviour
 {
 
     [SerializeField] private float jumpFactor = 300.0f;
