@@ -14,7 +14,7 @@ Welcome to _An Introduction to Building 3D Games in Unity_, a 3-hour workshop ru
 
 The workshop is an introduction to building 3D games, using [Unity](https://unity.com/). 
 
-During the workshop, you will use [meshes](https://en.wikipedia.org/wiki/Polygon_mesh) to define the shape of objects in your virtual world, which you will define with [materials](https://docs.unity3d.com/Manual/Materials.html) and [textures](https://docs.unity3d.com/Manual/Textures.html). You will also simulate real-world forces, such as gravity and collisions, using physics components, such as [rigidbodies](https://en.wikipedia.org/wiki/Rigid_body) and [colliders](https://docs.unity3d.com/Manual/CollidersOverview.html). You will add some [audio](https://docs.unity3d.com/Manual/AudioOverview.html), and, to add a game element to that world, you will do some [scripting](https://docs.unity3d.com/Manual/ScriptingSection.html).
+During the workshop, you will place objects in a virtual space, which you will colour, using [materials](https://docs.unity3d.com/Manual/Materials.html). You will also simulate real-world forces, such as gravity and collisions, using physics components, such as [rigidbodies](https://en.wikipedia.org/wiki/Rigid_body) and [colliders](https://docs.unity3d.com/Manual/CollidersOverview.html). Finally, you will create a game by adding some user input and by doing some [scripting](https://docs.unity3d.com/Manual/ScriptingSection.html).
 
 ## Dependencies
 
@@ -36,7 +36,6 @@ Below is some background material that helps explain some of the concepts introd
 - [Modelling](./modelling.md)
 - [Materials and Textures](./materials.md)
 - [3D Physics](./3DPhysics.md)
-- [Audio](./audio.md)
 - [Scripting](./scripting.md)
 
 As you immerse yourself in the 3D programming space, you may wish to deepen your knowledge by grasping some of the theoretical background underpinning the work you do. To help get you started, here's some theory:
