@@ -42,7 +42,7 @@ Now position everything so that the player is looking directly into the arena, a
 
 At this point, the _Hierarchy_ is beginning to look a little unorganised, so, just as you have done for the _Project_, you should tidy up. To do so, click on your first wall in the hierarchy, then shift-click on the last wall to highlight all four walls. Then right-click > _Create Empty parent_ and call it "Walls". Next, highlights "Ground", "Roof" and "Walls", right-click > _Create Empty Parent_ and call it "Arena". 
 
-All being well, you will have a _Hierarchy and _scene_ that looks something like Figure 6, below:
+All being well, you will have a _Hierarchy_ and _scene_ that looks something like Figure 6, below:
 
 ![Arena Walls](./images/arenaWalls.png)
 
