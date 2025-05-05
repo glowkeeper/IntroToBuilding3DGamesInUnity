@@ -2,6 +2,10 @@
 
 [Session Video](https://youtu.be/qdIiY5UsLPQ).
 
+Below is a whistle-stop tour of the Unity Editor, which you load via the Unity Hub.
+
+## The Unity Editor
+
 The organisation of the main windows in your running editor might differ to that shown in Figure 1 below,  because the layout can be rearranged according to your preferences. However, you should have several key windows:
 
 ![The Unity Editor](./images/unityEditor.png)
