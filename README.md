@@ -33,18 +33,18 @@ If you plan on taking part in the workshop via your own laptop in your own time,
 
 Below is some background material that helps explain some of the concepts introduced above:
 
-- [Modelling](./modelling.md)
-- [Materials and Textures](./materials.md)
-- [3D Physics](./3DPhysics.md)
-- [Scripting](./scripting.md)
+- [Modelling](./docs/supplimentary/modelling.md)
+- [Materials and Textures](/docs/supplimentary/materials.md)
+- [3D Physics](/docs/supplimentary/3DPhysics.md)
+- [Scripting](/docs/supplimentary/scripting.md)
 
 As you immerse yourself in the 3D programming space, you may wish to deepen your knowledge by grasping some of the theoretical background underpinning the work you do. To help get you started, here's some theory:
 
 - [Graphics Background](./docs/supplimentary/graphicsBackground.md)
-- [Coordinate Systems](./docs/coordinateSystems.md)
-- [Vectors](./docs/vectors.md)
-- [Trigonometry](./docs/trigonometry.md)
-- [Forces](./docs/forces.md)
+- [Coordinate Systems](./docs/supplimentary/maths/coordinateSystems.md)
+- [Vectors](./docs/supplimentary/maths/vectors.md)
+- [Trigonometry](./docs/supplimentary/maths/trigonometry.md)
+- [Forces](./docs/supplimentary/maths/forces.md)
 
 Much of the naterial for the documents above was collated from [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html), the [3D Maths Primer for Graphics and Game Development](https://gamemath.com/), and [The Nature of Code](https://natureofcode.com/) - if you're interested in grasping more of the theory, then go investigate those sites. [The Nature of Code](https://natureofcode.com/) uses a Javascript library called [p5.js](https://p5js.org/) to demonstrate its principles, but don't worry too much if you're not familiar with javascript, as you do not necessarily need that familiarity to understand the concepts presented.
 
