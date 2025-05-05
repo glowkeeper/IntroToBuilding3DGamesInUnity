@@ -1,5 +1,7 @@
 # Adding Input Controls
 
+[Session Video](https://youtu.be/sYrOzp9clbE).
+
 Unity's [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/index.html) enables you to add interactions to your scenes. You will use it to add input actions to the ball you created in ["Creating Basic 3D Objects"](./creating3DObjects.md). 
 
 ## Adding the Input System

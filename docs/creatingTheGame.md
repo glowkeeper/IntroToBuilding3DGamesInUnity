@@ -1,5 +1,7 @@
 # Creating the Game
 
+[Session Video](https://youtu.be/uFVocEVFQtQ).
+
 Now that you've [got used to the Unity editor](./editorOverview.md), [created some basic 3D objects](./creating3DObjects.md) and [added some input controls](./addingInputControls.md), it's time to turn the scene into a game.
 
 The game you are going to create is very simple. It will feature an enclosed arena containing four zones (left, right, front and back), which your ball must enter as quickly as possible.

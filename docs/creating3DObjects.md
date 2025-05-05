@@ -1,5 +1,7 @@
 # Creating Basic 3D Objects
 
+[Session Video](https://youtu.be/BoD6pkiDgnU).
+
 _GameObjects_ are the basic building blocks of any Unity scene.
 
 ## Creating GameObjects
