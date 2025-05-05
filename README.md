@@ -1,6 +1,8 @@
 # An Introduction to Building 3D Games in Unity
 
-Welcome to _An Introduction to Building 3D Games in Unity_, a 3-hour workshop run for foundation year students at the [University of Roehampton](https://www.roehampton.ac.uk/).
+Welcome to _An Introduction to Building 3D Games in Unity_. 
+
+The documentation here form the materials for a 3-hour workshop run for foundation year students at the [University of Roehampton](https://www.roehampton.ac.uk/).
 
 ## Table of Contents
 <!-- no toc -->
@@ -44,7 +46,7 @@ As you immerse yourself in the 3D programming space, you may wish to deepen your
 - [Coordinate Systems](./docs/supplimentary/maths/coordinateSystems.md)
 - [Vectors](./docs/supplimentary/maths/vectors.md)
 - [Trigonometry](./docs/supplimentary/maths/trigonometry.md)
-- [Forces](./docs/supplimentary/maths/forces.md)
+- [Forces](./docs/forces.md)
 
 Much of the naterial for the documents above was collated from [Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html), the [3D Maths Primer for Graphics and Game Development](https://gamemath.com/), and [The Nature of Code](https://natureofcode.com/) - if you're interested in grasping more of the theory, then go investigate those sites. [The Nature of Code](https://natureofcode.com/) uses a Javascript library called [p5.js](https://p5js.org/) to demonstrate its principles, but don't worry too much if you're not familiar with javascript, as you do not necessarily need that familiarity to understand the concepts presented.
 
